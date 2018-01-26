@@ -18,28 +18,48 @@ function userInput() {
   return newOrder
 }
 
+//consider creating price based on size for the protoypes
+//size cost: 12: xL, 10: l, 8: md, 6: sm
+//topping cost: 5: meat Tornado, sausage/pepperoni: 3, cheese: 2
+
 PizzaOrder.prototype.price = function{
   var cost = 0;
-  if (this.size === "Xtra Large") {
+  if (this.size === "Xtra Large" && this.topping === "Meat Tornado") {
+    cost = 17;
+  } else if (this.size === "Large" && this.topping === "Sausage" || this.topping === "Pepperoni") {
+    cost = 15;
+  } else {
+    cost = 14;
+  }
+  if (this.size === "Large" && this.topping === "Meat Tornado") {
+    cost = 15;
+  } else if (this.size === "Large" && this.topping === "Sausage" || this.topping === "Pepperoni") {
+    cost = 13;
+  } else {
     cost = 12;
-  } else if (this.size === "Large") {
-    cost = 10;
-  } else if (this.size === "Medium") {
+  }
+  if (this.size === "Medium" && this.topping === "Meat Tornado") {
+    cost = 13;
+  } else if (this.size === "Medium" && this.topping === "Sausage" || this.topping === "Pepperoni") {
+    cost = 11;
+  } else {
+      cost = 10;
+  }
+  if (this.size === "Small" && this.topping === "Meat Tornado") {
+    cost = 11;
+  } else if (this.size === "Small" && this.topping === "Sausage" || this.topping === "Pepperoni") {
+    cost = 9;
+  } else {
     cost = 8;
-  } else {
-    cost = 6;
   }
-
-  if (this.topping === "Meat Tornado") {
-    cost = 5;
-  } else if (this.topping === "Pepperoni" || this.topping === "Sausage") {
-    cost = 3;
-  } else {
-    cost = 2;
-  }
+    return cost;
 }
 
 //front-end logic:
 $(document).ready(function() {
-
+  $("form#pizza").submit(function(event) {
+    event.preventDefault();
+    var order = userInput();  
+  }
+)
 });
