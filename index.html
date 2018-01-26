@@ -3,15 +3,18 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Sedgwick+Ave" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Jerky Boys' Pizza</title>
+    <title>Shaolin's Finest: The Pizzaria</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Jerky Boys' Pizza</h1>
+        <h1>Wu Tang Pizzaria</h1>
+          <h3>Come for the eats, stay for the beats</h3>
       </div>
       <form id="pizza" class="well">
         <h2>Whadya want?</h2>
@@ -20,11 +23,11 @@
           <select class="form-control" id="size">
             <option>Select Size</option>
             <option>Small: Are you kiddin' me?</option>
-            <option>Medium: Whadya on a diet or somethin'?</option>
-            <option>Large: We hope you skipped breakfast.</option>
-            <option>Xtra Large: This is how legends are made.</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Xtra Large: Bring Da Ruckus</option>
           </select>
-
+          <br></br>
           <label for="topping">Toppings</label>
           <select class="form-control" id="topping">
             <option>Select Topping</option>
@@ -34,8 +37,16 @@
             <option>Meat Tornado: everything but the kitchen sink! </option>
           </select>
           <br></br>
-          <button type="submit" class="btn btn-primary">Order</button>
+        </div>
+          <button type="submit" class="btn btn-primary">Place Order</button>
       </form>
-    <div>
+      <div class="well" id="order">
+        <h3>Bring Da Ruckus! Your total is: </h2>
+    </div>
+    <blockquote id="quote">
+      <footer id="font">"I smoke on the mic like smokin' Joe Frazier
+The hell-raiser, raising hell with the flavor."
+      </footer>
+    </blockquote>
   </body>
 </html>

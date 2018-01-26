@@ -1,0 +1,43 @@
+/*@import url(https://fonts.google.com/specimen/Shrikhand?selection.family=Shrikhand);*/
+
+.jumbotron {
+  margin-top: 10px;
+  color: white;
+  background-color: white;
+  background-image: url("https://www.imgbase.info/images/safe-wallpapers/music/wu_tang_clan/55772_wu_tang_clan.jpg");
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  opacity: .89;
+}
+ .container {
+   font-family: 'Kaushan Script', cursive;
+   /*opacity: .55;*/
+ }
+
+ body {
+   background-image: url("http://chrispiascik.com/wp-content/uploads/2016/04/2132-20160425-RzaGzaPza.png");
+   background-size: 1350px;
+ }
+
+#pizza {
+  text-align: center;
+  opacity: .89;
+  color: white;
+  margin-top: 225px;
+  background-color: #4E78A0;
+  font-size: 1.5em;
+}
+
+#order {
+  background-color: #4E78A0;
+  opacity: .89;
+  /*margin-top: 50px;*/
+  color: white;
+  font-size: 1.5em;
+}
+
+#font {
+  color: white;
+  font-size: 1.75em;
+  font-weight: 900;
+}
