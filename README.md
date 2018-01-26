@@ -1,6 +1,6 @@
-# _{Application Name}_
+# _{Jerky Boys' Pizza}_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _{This website allows users to order pizza based on their topping preferences}, {January 26, 2018}_
 
 #### By _Bryce Frazier_
 
