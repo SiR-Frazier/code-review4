@@ -1,9 +1,3 @@
-//specs:
-//the user will select a size for the pizza using one of the buttons
-// write constructor for pizza order;
-// write function that allows user input to be registered on the form;
-// write protoype method for the price of each pizza size and for the topping(s);
-
 //back-end logic:
 function PizzaOrder(size, topping) {
   this.size = size;
@@ -19,12 +13,12 @@ function userInput() {
 }
 
 //consider creating price based on size for the protoypes
-//size cost: 12: xL, 10: l, 8: md, 6: sm
-//topping cost: 5: meat Tornado, sausage/pepperoni: 3, cheese: 2
+//size cost: xl: 12, l: 10, m: 6, sm: 6.
+//topping cost: 5: meat tornado, sausage/pepperoni: 3, cheese: 2
 
 PizzaOrder.prototype.price = function(){
   var cost = 0;
-   //xtra large
+  //  //xtra large
   if (this.size === "Xtra Large: Bring Da Ruckus") {
     cost = 12;
   } else if (this.size === "Large") {
@@ -32,20 +26,23 @@ PizzaOrder.prototype.price = function(){
   } else if (this.size === "Medium") {
     cost = 8;
   } else if (this.size === "Select Size") {
-    alert("What are you tryin' to pull?"); 
+    alert("What are you tryin' to pull?");
   } else {
     cost = 6;
   }
-  if (this.topping === "Meat Tornado: everything but the kitchen sink!") {
-    cost + 5;
+  if (this.topping === "Meat Tornado: Everything but the kitchen sink!") {
+    cost += 5;
   } else if (this.topping === "Sausage" || this.topping === "Pepperoni") {
-    cost + 3;
-  } else {
-    cost + 2;
+    cost += 3;
+  } else if (this.topping === "Select Topping") {
+    alert ("You're not finished yet!")
+  }  else {
+    cost += 2;
     }
     return cost;
   }
-  // if (this.size === "Xtra Large: Bring Da Ruckus" && this.topping === "Meat Tornado: everything but the kitchen sink!"){
+  //original attempt:
+  //  if (this.size === "Xtra Large: Bring Da Ruckus" && this.topping === "Meat Tornado: everything but the kitchen sink!"){
   //   cost = 17;
   // } else if (this.size === "Xtra Large: Bring Da Ruckus" && this.topping === "Sausage" || this.topping === "Pepperoni") {
   //   cost = 15;
